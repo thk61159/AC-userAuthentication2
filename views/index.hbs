@@ -1,0 +1,25 @@
+{{!-- <div class='card mx-auto' style='width: 25rem; border:none; margin-top:15%'>
+  <a href="./login" class='text-center'>
+    <h1 class='mx-auto'>Click here to Login</h1>
+  </a>
+</div> --}}
+<div class='card mx-auto' style='width: 18rem; border:none; margin-top:15%'>
+  <h1 class=' mx-auto'>Login</h1>
+  <div class='card-body'>
+    <form action="/login" method="POST">
+      <div class='mb-3'>
+        <label for='exampleInputEmail1' class='form-label'>Email address</label>
+        <input type='email' name='email' class='form-control' id='exampleInputEmail1' aria-describedby='emailHelp'
+          placeholder="Email" />
+      </div>
+      <div class='mb-1'>
+        <label for='exampleInputPassword1' class='form-label'>Password</label>
+        <input type='password' name='password' class='form-control' id='exampleInputPassword1' placeholder="Password" />
+      </div>
+      <div class='text-danger ' {{#unless wrong}}style="display: none;"{{/unless}}>wrong mail address or password!!</div>
+
+      <button type='submit' class='btn btn-primary d-block mx-auto mt-3'>Submit</button>
+    </form>
+
+  </div>
+</div>
